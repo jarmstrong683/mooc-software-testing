@@ -37,7 +37,7 @@ public class GHappyTest {
         Assertions.assertEquals(expectedResult, result);
     }
     @ParameterizedTest(name = "str={0},  result={1}")
-    @CsvSource({ "'ggb',true", "'agg',true", "'ghg',false" })
+    @CsvSource({ "'ggb',true", "'agg',true", "'ghg',false", "'aaa',false" })
     public void has2Gs(String str, boolean expectedResult) {
         boolean result = gHappyString.gHappy(str);
         Assertions.assertEquals(expectedResult, result);
