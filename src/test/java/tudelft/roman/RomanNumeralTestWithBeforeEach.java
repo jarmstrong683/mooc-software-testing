@@ -10,6 +10,7 @@ public class RomanNumeralTestWithBeforeEach {
 
     @BeforeEach
     public void initialize() {
+
         this.roman = new RomanNumeral();
     }
 
@@ -35,5 +36,10 @@ public class RomanNumeralTestWithBeforeEach {
     public void numberWithAndWithoutSubtractiveNotation() {
         int result = roman.convert("XLIV");
         Assertions.assertEquals(44, result);
+    }
+    @Test
+    public void numberFail() {
+        int result = roman.convert("VX");
+        Assertions.assertEquals(5, result);
     }
 }
